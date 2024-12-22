@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    width: 100%;
+    background: url('your-picture.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire background */
+    color: white; /* Text color for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Removes scrollbars */
+}
+
+/* Content Container */
+.content {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for readability */
+    width: 80%; /* Adjusted width for better proportion */
+    max-width: 1200px; /* Limits the width on larger screens */
+    padding: 30px 40px; /* Increased padding for spaciousness */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+    background-image: url('pic.png'); /* Optional: If you prefer using content background */
+    background-repeat: no-repeat;
+    background-position: right center; /* Positions the image to the right */
+    background-size: 40%; /* Adjusts the size of the background image */
+}
+
+/* Adjusting the Body Background Position */
+body {
+    background-position: 60% center; /* Shifts the background image to the right */
+    /* Alternatively, you can use pixel values:
+    background-position: 70% center; */
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: #ffda79; /* Bright color for emphasis */
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 8px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+header nav a:hover {
+    background-color: #ffda79;
+    color: black;
+    border-color: #ffda79;
+}
+
+.resume-button {
+    background-color: #ffda79;
+    color: black;
+    border: none;
+}
+
+.resume-button:hover {
+    background-color: #e6c158;
+}
+
+/* Main Sections */
+main {
+    width: 100%;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffda79; /* Consistent color theme */
+}
+
+section p, section ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li a {
+    color: #ffda79;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        width: 95%;
+        background-size: 50%; /* Adjust image size on smaller screens */
+    }
+
+    body {
+        background-position: 50% center; /* Center the image on smaller screens */
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
